@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.15.0@5c774aca4746caf3d239d9c8cadb9f882ca29352">
+<files psalm-version="5.24.0@462c80e31c34e58cc4f750c656be3927e80e550e">
   <file src="src/ComponentInstaller.php">
     <InvalidArgument>
-      <code>new Collection(array_keys(self::PACKAGE_TYPES))</code>
+      <code><![CDATA[new Collection(array_keys(self::PACKAGE_TYPES))]]></code>
     </InvalidArgument>
     <InvalidReturnStatement>
       <code><![CDATA[(new Collection(self::PACKAGE_TYPES))
@@ -25,17 +25,17 @@
   </file>
   <file src="src/ConfigDiscovery/DevelopmentWorkConfig.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/ConfigDiscovery/MezzioDevelopmentConfig.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/ConfigDiscovery/MezzioDevelopmentWorkConfig.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Injector/AbstractInjector.php">
@@ -46,39 +46,42 @@
       <code><![CDATA[sprintf($this->isRegisteredPattern, preg_quote(addslashes($package), '/'))]]></code>
       <code><![CDATA[sprintf($this->removalPatterns['pattern'], preg_quote($package))]]></code>
     </ArgumentTypeCoercion>
+    <RiskyTruthyFalsyComparison>
+      <code><![CDATA[$firstApplicationModule = $this->findFirstEnabledApplicationModule($this->applicationModules, $config)]]></code>
+    </RiskyTruthyFalsyComparison>
   </file>
   <file src="src/Injector/DevelopmentConfigInjector.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Injector/DevelopmentWorkConfigInjector.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Injector/MezzioConfigInjector.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Injector/MezzioDevelopmentConfigInjector.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src/Injector/MezzioDevelopmentWorkConfigInjector.php">
     <PossiblyUnusedMethod>
-      <code>__construct</code>
+      <code><![CDATA[__construct]]></code>
     </PossiblyUnusedMethod>
   </file>
   <file src="test/ConfigDiscoveryTest.php">
     <InvalidPropertyAssignmentValue>
-      <code>new Collection([
+      <code><![CDATA[new Collection([
             InjectorInterface::TYPE_CONFIG_PROVIDER,
             InjectorInterface::TYPE_COMPONENT,
             InjectorInterface::TYPE_MODULE,
-        ])</code>
+        ])]]></code>
     </InvalidPropertyAssignmentValue>
   </file>
 </files>

@@ -146,7 +146,7 @@ final class ComponentInstallerTest extends TestCase
 
     public function createApplicationConfig(?string $contents = null): void
     {
-        $contents = $contents ?: $this->createApplicationConfigWithModules([]);
+        $contents = $contents ?? $this->createApplicationConfigWithModules([]);
         vfsStream::newFile('config/application.config.php')
             ->at($this->projectRoot)
             ->setContent($contents);
